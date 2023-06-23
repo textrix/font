@@ -2,8 +2,36 @@
 <html>
    <head>
       <title>My Cool Website</title>
+      <link rel="stylesheet" href="/path/to/styles/default.min.css">
+      <script src="/path/to/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script>
    </head>
    <body>
       <a href="https://textrix.github.io/font/NanumGothicCoding.css">https://textrix.github.io/font/NanumGothicCoding.css</a>
+      <pre><code class="language-css">
+@font-face {
+  font-display: swap;
+  font-family: 'Nanum Gothic Coding';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://textrix.github.io/font/NanumGothicCoding-Regular.ttf') format('truetype');
+}
+
+body {
+  --font-default: 'Nanum Gothic Coding';
+  --font-monospace-default: 'Nanum Gothic Coding';
+  --font-interface-override: '??';
+  --font-interface-theme: '??';
+  --font-interface: var(--font-interface-override), var(--font-interface-theme), var(--default-font, '??'), var(--font-default);
+  --font-text-override: '??';
+  --font-text-theme: '??';
+  --font-text: var(--font-text-override), var(--font-text-theme), var(--font-interface);
+  --font-monospace-override: '??';
+  --font-monospace-theme: '??';
+  --font-monospace: var(--font-monospace-override), var(--font-monospace-theme), var(--font-monospace-default);
+  --font-text-size: 16px;
+  --font-mermaid: var(--font-text);
+}
+      </code></pre>
    </body>
 </html>
